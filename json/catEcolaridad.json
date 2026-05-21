@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "descripcion": "Primaria"
+    },
+    {
+        "id": 2,
+        "descripcion": "Secundaria"
+    },
+    {
+        "id": 3,
+        "descripcion": "Preparatoria"
+    },
+    {
+        "id": 4,
+        "descripcion": "Licenciatura"
+    },
+    {
+        "id": 5,
+        "descripcion": "Maestría"
+    },
+    {
+        "id": 6,
+        "descripcion": "Doctorado"
+    }
+]

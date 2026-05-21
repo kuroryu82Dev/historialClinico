@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "descripcion": "Soltero/a"
+    },
+    {
+        "id": 2,
+        "descripcion": "Casado/a"
+    },
+    {
+        "id": 3,
+        "descripcion": "Divorciado/a"
+    },
+    {
+        "id": 4,
+        "descripcion": "Viudo/a"
+    },
+    {
+        "id": 5,
+        "descripcion": "Unión Libre"
+    },
+    {
+        "id": 6,
+        "descripcion": "Separado/a"
+    },
+    {
+        "id": 7,
+        "descripcion": "Otro"
+    }
+]

@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "descripcion": "IMSS"
+    },
+    {
+        "id": 2,
+        "descripcion": "ISSSTE"
+    },
+    {
+        "id": 3,
+        "descripcion": "Seguro Popular"
+    },
+    {
+        "id": 4,
+        "descripcion": "Particular"
+    },
+    {
+        "id": 5,
+        "descripcion": "Otro"
+    }
+]

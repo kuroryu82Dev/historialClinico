@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../styles/registro.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <script src="../scripts/menu.js"></script>
+    <script src="../scripts/registro.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <title>Sistema medico -Registro</title>
+</head>
+<body>
+    <header>
+        <nav id="menu">
+            <h1>Sistema medico</h1>
+        </nav>
+    </header>
+
+    <div class="registro-container-principal">
+        <div class="registro-container">
+            <h2 class="titulo-formulario">📋 Registro Clínico del Paciente</h2>
+
+            <form id="registro-form">
+                <!-- Sección: Identificación -->
+                <div class="form-section">
+                    <h3 class="section-title">🧑 Identificación</h3>
+                    <div class="form-grid">
+                        <input type="text" class="form-control" id="nombre" placeholder="Nombre(s)">
+                        <input type="text" class="form-control" id="paterno" placeholder="Apellido paterno">
+                        <input type="text" class="form-control" id="materno" placeholder="Apellido materno">
+                        <input type="text" class="form-control" id="curp" placeholder="CURP">
+                        <input type="text" class="form-control" id="RFC" placeholder="RFC">
+                        <input type="date" class="form-control" id="fechaNacimiento" placeholder="Fecha de nacimiento">
+                        <select class="form-control" id="sexo-menu">
+                            <option value="">Selecciona el sexo</option>
+                        </select>
+                        <select class="form-control" id="estadoCivil-menu">
+                            <option value="">Selecciona el estado civil</option>
+                        </select>
+                    </div>
+                </div>
+                <!-- Sección: Domicilio -->
+                <div class="form-section">
+                    <h3 class="section-title">🏠 Domicilio</h3>
+                    <div class="form-grid">
+                        <input type="text" class="form-control" id="calle" placeholder="Calle">
+                        <input type="text" class="form-control" id="numero" placeholder="Número">
+                        <input type="text" class="form-control" id="colonia" placeholder="Colonia">
+                        <input type="text" class="form-control" id="municipio" placeholder="Municipio">
+                        <input type="text" class="form-control" id="estado" placeholder="Estado">
+                        <input type="text" class="form-control" id="cp" placeholder="Código postal">
+                    </div>
+                </div>
+                <!-- Sección: Contacto -->
+                <div class="form-section">
+                    <h3 class="section-title">📞 Contacto</h3>
+                    <div class="form-grid">
+                        <input type="text" class="form-control" id="telefono" placeholder="Teléfono">
+                        <input type="email" class="form-control" id="email" placeholder="Correo electrónico">
+                    </div>
+                </div>
+                <!-- Sección: Salud -->
+                <div class="form-section">
+                    <h3 class="section-title">🩺 Información médica</h3>
+                    <div class="form-grid">
+                        <select class="form-control" id="tipoSangre-menu">
+                            <option value="">Selecciona el tipo de sangre</option> 
+                        </select>
+                        <input type="text" class="form-control" id="alergias" placeholder="Alergias">
+                        <input type="text" class="form-control" id="ocupacion" placeholder="Ocupación">
+                        <select class="form-control" id="escolaridad-menu">
+                            <option value="">Selecciona la escolaridad</option>
+                        </select>
+                    </div>
+                </div>
+                <!-- Sección: Seguridad Social -->
+                <div class="form-section">
+                    <h3 class="section-title">🏥 Seguridad social</h3>
+                    <div class="form-grid">
+                        <input type="text" class="form-control" id="numeroAfiliacion" placeholder="Número de afiliación">
+                        <select class="form-control" id="institucion-menu">
+                            <option value="">Selecciona la institución de seguridad</option>
+                        </select>
+                        
+                    </div>
+                </div>
+                <!-- Sección: Responsable -->
+                <div class="form-section">
+                    <h3 class="section-title">👨‍👩‍👧‍👦 Responsable</h3>
+                    <div class="form-grid">
+                        <input type="text" class="form-control" id="nombreResponsable" placeholder="Nombre del responsable">
+                        <input type="text" class="form-control" id="parentesco" placeholder="Parentesco">
+                        <input type="text" class="form-control" id="telefonoResponsable" placeholder="Teléfono del responsable">
+                    </div>
+                </div>
+                <div class="form-submit">
+                    <button type="submit" class="btn btn-primary submit-btn" id="submitPacienteBtn">Registrar paciente</button>
+                </div>
+                
+
+            </form>
+        </div>
+    </div>
+    
+</body>
+</html>

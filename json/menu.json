@@ -1,0 +1,22 @@
+[
+    { 
+        "name": "Inicio",
+        "path": "../index.html" 
+    },
+    { 
+        "name": "Listado",
+        "path": "../template/listaPacientes.html" 
+    },
+    { 
+        "name": "Registro",
+        "path": "../template/registro.html" 
+    },
+    { 
+        "name": "Historial", 
+        "path": "../template/historial.html" 
+    },
+    { 
+        "name": "Registro historial", 
+        "path": "../template/registro-historial.html" 
+    }
+]

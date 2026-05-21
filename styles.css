@@ -1,0 +1,68 @@
+*{
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0b1120;
+    color: #f8fafc;
+}
+
+header nav{
+    display: flex;
+    gap: 1rem;
+    background: linear-gradient(90deg, #111827, #1f2937);
+    padding: 1rem 1.5rem;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    color: white;
+}
+
+header h1 {
+    font-size: 1.4rem;
+    letter-spacing: 0.03em;
+    color: #f8fafc;
+}
+
+nav ul{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    list-style: none;
+}
+
+nav ul li a{
+    color: #e2e8f0;
+    text-decoration: none;
+    padding: 0.65rem 1rem;
+    border-radius: 999px;
+    transition: background 0.3s ease, color 0.3s ease; 
+    font-weight: 500;
+}
+
+nav ul li a:hover {
+    background: #e2e8f0;
+    color: #111827;
+}
+
+.registro-container-principal {
+    padding: 2rem;
+    background-color: #f4f6f9;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.registro-container{
+    background-color: #fff;
+    padding: 2.5rem 3rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    max-width: 960px;
+}

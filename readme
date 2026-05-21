@@ -1,0 +1,1 @@
+ejecutar python -m http.server 8000 para abrir en el navegador como localhost:8000
