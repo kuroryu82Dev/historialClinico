@@ -1,3 +1,11 @@
+.busqueda-container {
+    margin-bottom: 1rem;
+}
+
+.busqueda-container .form-control {
+    max-width: 520px;
+}
+
 .tabla-container {
     width: 100%;
     max-width: 100%;

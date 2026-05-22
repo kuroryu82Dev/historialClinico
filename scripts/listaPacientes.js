@@ -4,6 +4,8 @@ let institucionMap = {};
 let estadoCivilMap = {};
 let catSexoMap = {};
 let pacienteSeleccionadoIndex = null;
+let pacientesGuardados = [];
+let textoBusquedaPaciente = '';
 
 ObtieneListaPacientes = async () => {
     await ObtieneTipoSangre();
@@ -12,11 +14,44 @@ ObtieneListaPacientes = async () => {
     await ObtieneEstadoCivil();
     await ObtieneCatSexo();
 
-    let pacientesGuardados = JSON.parse(localStorage.getItem('pacientes')) || [];
+    pacientesGuardados = JSON.parse(localStorage.getItem('pacientes')) || [];
+    renderTablaPacientes();
+}
+
+const renderTablaPacientes = () => {
     let bodyTabla = document.getElementById('pacientes-table-body');
     bodyTabla.innerHTML = '';
 
-    pacientesGuardados.forEach((item, index) => {
+    const termino = textoBusquedaPaciente.trim().toLowerCase();
+    const pacientesFiltrados = pacientesGuardados
+        .map((item, index) => ({ item, index }))
+        .filter(({ item }) => {
+            if (!termino) return true;
+            const textoCompleto = [
+                item.nombre,
+                item.paterno,
+                item.materno,
+                item.curp,
+                item.RFC,
+                item.telefono,
+                item.email
+            ]
+                .filter(Boolean)
+                .join(' ')
+                .toLowerCase();
+            return textoCompleto.includes(termino);
+        });
+
+    if (pacientesFiltrados.length === 0) {
+        bodyTabla.innerHTML = `
+            <tr>
+                <td colspan="11" class="text-center py-3">No se encontraron pacientes con ese criterio.</td>
+            </tr>
+        `;
+        return;
+    }
+
+    pacientesFiltrados.forEach(({ item, index }) => {
         const tipoSangreTexto = ObtieneDescripcionTipoSangre(item.tipoSangre);
         const escolaridadTexto = ObtieneDescripcionEscolaridad(item.escolaridad);
         const institucionTexto = ObtieneDescripcionInstitucion(item.institucion);
@@ -198,7 +233,7 @@ window.addEventListener('DOMContentLoaded', ()=>{
     const borrarBtn = event.target.closest('.borrar-paciente-btn');
     if (borrarBtn) {
         const index = Number(borrarBtn.dataset.index);
-        let pacientesGuardados = JSON.parse(localStorage.getItem('pacientes')) || [];
+        pacientesGuardados = JSON.parse(localStorage.getItem('pacientes')) || [];
         const paciente = pacientesGuardados[index];
 
         Swal.fire({
@@ -212,7 +247,7 @@ window.addEventListener('DOMContentLoaded', ()=>{
             if (!result.isConfirmed) return;
             pacientesGuardados.splice(index, 1);
             localStorage.setItem('pacientes', JSON.stringify(pacientesGuardados, null, 2));
-            ObtieneListaPacientes();
+            renderTablaPacientes();
             Swal.fire({
                 title: 'Registro eliminado',
                 text: 'El paciente fue eliminado exitosamente.',
@@ -229,7 +264,7 @@ window.addEventListener('DOMContentLoaded', ()=>{
 
     const index = Number(button.dataset.index);
     pacienteSeleccionadoIndex = index;
-    const pacientesGuardados = JSON.parse(localStorage.getItem('pacientes')) || [];
+    pacientesGuardados = JSON.parse(localStorage.getItem('pacientes')) || [];
     
     mostrarModalPaciente(pacientesGuardados[index]);
     });
@@ -239,6 +274,14 @@ window.addEventListener('DOMContentLoaded', ()=>{
             if (pacienteSeleccionadoIndex == null) return;
             localStorage.setItem('pacienteEditarIndex', String(pacienteSeleccionadoIndex));
             window.location.href = '../template/registro.html?modo=editar';
+        });
+    }
+
+    const buscarPacienteInput = document.getElementById('buscarPacienteInput');
+    if (buscarPacienteInput) {
+        buscarPacienteInput.addEventListener('input', (event) => {
+            textoBusquedaPaciente = event.target.value || '';
+            renderTablaPacientes();
         });
     }
 });
