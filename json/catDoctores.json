@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "nombre": "Dr. Juan Pérez",
+        "especialidad": "Cardiología",
+        "telefono": "555-1234",
+        "email": "",
+        "cedula": "12345678"
+    },
+    {
+        "id": 2,
+        "nombre": "Dra. María López",
+        "especialidad": "Pediatría",
+        "telefono": "555-5678",
+        "email": "",
+        "cedula": "87654321"
+    },
+    {
+        "id": 3,
+        "nombre": "Dr. Carlos García",
+        "especialidad": "Dermatología",
+        "telefono": "555-9012",
+        "email": "",
+        "cedula": "11223344"
+    }
+]

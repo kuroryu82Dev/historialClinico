@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../styles/listaPacientes.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <script src="../scripts/menu.js"></script>
+    <script src="../scripts/historiaClinica.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <title>Sistema medico - Historia Clinica</title>
+</head>
+<body>
+
+    <header>
+        <nav id="menu">
+            <h1>Sistema medico</h1>
+        </nav>
+    </header>
+
+    <div class="registro-container-principal">
+        <div class="registro-container">
+            <h2 class="lista-title">Historia clinica de los pacientes</h2>
+            <div class="busqueda-container">
+                <input
+                    type="text"
+                    id="buscarPacienteInput"
+                    class="form-control"
+                    placeholder="Buscar paciente por nombre, CURP, RFC o motivo"
+                    aria-label="Buscar paciente"
+                >
+            </div>
+            <div class="tabla-container">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Fecha consulta</th>
+                            <th>Nombre</th>
+                            <th>Apellido Paterno</th>
+                            <th>Apellido Materno</th>
+                            <th>Motivo</th>
+                            <th>Antecedentes familiares</th>
+                            <th>Antecedentes personales</th>
+                            <th>No patologicos</th>
+                            <th>Metodo anticonceptivo</th>
+                            <th>Observaciones ginecologicas</th>
+                            <th>Fecha de registro</th>
+                        </tr>
+                    </thead>
+                    <tbody id="pacientes-table-body"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
