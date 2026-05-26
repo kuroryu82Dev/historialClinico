@@ -12,8 +12,8 @@
         "path": "../template/registro.html" 
     },
     { 
-        "name": "Historial", 
-        "path": "../template/historial.html" 
+        "name": "Historia Clínica", 
+        "path": "../template/historiaClinica.html" 
     },
     { 
         "name": "Registro historial", 

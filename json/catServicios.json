@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "nombre": "Consulta General"
+    },
+    {
+        "id": 2,
+        "nombre": "Examen Físico"
+    },
+    {
+        "id": 3,
+        "nombre": "Laboratorio"
+    },
+    {
+        "id": 4,
+        "nombre": "Radiología"
+    },
+    {
+        "id": 5,
+        "nombre": "Cirugía"
+    },
+    {
+        "id": 6,
+        "nombre": "Terapia Física"
+    },
+    {
+        "id": 7,
+        "nombre": "Vacunación"
+    },
+    {
+        "id": 8,
+        "nombre": "Consulta Especializada"
+    },
+    {
+        "id": 9,
+        "nombre": "Consulta Pediátrica"
+    },
+    {
+        "id": 10,
+        "nombre": "Consulta Ginecológica"
+    }
+]
