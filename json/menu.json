@@ -17,6 +17,6 @@
     },
     { 
         "name": "Registro historial", 
-        "path": "../template/registro-historial.html" 
+        "path": "../template/registroHistorial.html" 
     }
 ]

@@ -41,6 +41,12 @@
     gap: 1rem;
 }
 
+.form-grid-1 {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 1rem ;
+}
+
 .form-submit {
     display: flex;
     justify-content: center;
